@@ -12,7 +12,6 @@ notifications:
   on_failure: always
 
 php:
-  - 7.2
   - 7.3
 
 before_install:
