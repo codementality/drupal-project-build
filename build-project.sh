@@ -7,11 +7,13 @@ fi
 ## Downloads the drupal-composer/drupal-project as a zip file and unzips it.
 curl -o drupal.zip https://codeload.github.com/drupal-composer/drupal-project/zip/8.x
 unzip drupal.zip
-## Deletes the zip file, no longer needed
+## Deletes the zip file, no longer needed.
 rm drupal.zip
 mv drupal-project-8.x drupal
 ## Modify original composer.json file from above project.
 php build-composer-file.php
+## Replace all occurrences of "web" with "docroot" in the .gitignore file.
+sed -i 's/web/docroot/' drupal/.gitignore
 ## Add packages to composer.json file for this project.
 composer require "behat/mink-selenium2-driver" --dev --working-dir=drupal --no-update
 composer require "drupal/drupal-extension:^4.0@beta" --dev --working-dir=drupal --no-update
