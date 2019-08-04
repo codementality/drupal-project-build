@@ -4,12 +4,13 @@ set -e
 if [ -n "$TRAVIS" ]; then 
 	sudo chown -R $USER ~/
 fi
+
 ## Downloads the drupal-composer/drupal-project as a zip file and unzips it.
 curl -o drupal.zip https://codeload.github.com/drupal-composer/drupal-project/zip/8.x
 unzip drupal.zip
-## Deletes the zip file, no longer needed.
 rm drupal.zip
 mv drupal-project-8.x drupal
+
 ## Modify original composer.json file from above project.
 php build-composer-file.php
 ## Replace all occurrences of "web" with "docroot" in the .gitignore file.
@@ -35,6 +36,17 @@ composer require "drupal/styleguide:^1.0@alpha" --working-dir=drupal --no-update
 ## Copy the README.md to the drupal directory
 cp docs/README.md drupal/README.md
 ## Start creating repo commit
+
+## Downloads the codementality/drupal-project-docker as a zipfile and unzips it.
+curl -o develop.zip https://codeload.github.com/codementality/drupal-project-docker/zip/develop
+unzip develop.zip
+rm develop.zip
+mv drupal-project-docker-develop/docker drupal/docker
+mv drupal-project-docker-develop/tests drupal/tests
+mv drupal-project-docker-develop/Makefile drupal/Makefile
+mv drupal-project-docker-develop/docker-compose.yml drupal/docker-compose.yml
+rm -Rf drupal-project-docker-develop
+
 cd drupal
 git init
 ## set user name and email
