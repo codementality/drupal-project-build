@@ -4,12 +4,23 @@ set -e
 if [ -n "$TRAVIS" ]; then 
 	sudo chown -R $USER ~/
 fi
+
+## Downloads the codementality/drupal-project-docker as a zipfile and unzips it.
+curl -o develop.zip https://codeload.github.com/codementality/drupal-project-docker/zip/develop
+unzip develop.zip
+rm develop.zip
+mv drupal-project-docker-develop/docker docker
+mv drupal-project-docker-develop/tests tests
+mv drupal-project-docker-develop/Makefile Makefile
+mv drupal-project-docker-develop/docker-compose.yml docker-compose.yml
+rm -Rf drupal-project-docker-develop
+
 ## Downloads the drupal-composer/drupal-project as a zip file and unzips it.
 curl -o drupal.zip https://codeload.github.com/drupal-composer/drupal-project/zip/8.x
 unzip drupal.zip
-## Deletes the zip file, no longer needed.
 rm drupal.zip
 mv drupal-project-8.x drupal
+
 ## Modify original composer.json file from above project.
 php build-composer-file.php
 ## Replace all occurrences of "web" with "docroot" in the .gitignore file.
