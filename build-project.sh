@@ -35,6 +35,9 @@ composer require "drupal/redirect:^1.3" --working-dir=drupal --no-update
 composer require "drupal/styleguide:^1.0@alpha" --working-dir=drupal --no-update
 ## Copy the README.md to the drupal directory
 cp docs/README.md drupal/README.md
+## Get the .env.example file.
+cp docs/.env.example drupal/.env.example
+
 ## Start creating repo commit
 
 ## Downloads the codementality/drupal-project-docker as a zipfile and unzips it.
