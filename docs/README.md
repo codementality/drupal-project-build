@@ -43,6 +43,8 @@ cd some-dir
 composer require drupal/devel:~1.0
 ```
 
+You will want to copy the settings.php file into docroot/sites/default/settings.php, and copy the .env.example file to .env and modify the environment variables in that file.  These variables are used not only by Drupal once the site is installed, but also by Docker Compose, reading the variables in this file and overriding those value in the docker-compose.yml file that are referencing environment variables.  You can pick these out by looking for `${VARIABLE_NAME}` in the docker-compsose.yml file.
+
 The `composer create-project` command passes ownership of all files to the 
 project that is created. You should create a new git repository, and commit 
 all files not excluded by the .gitignore file.
