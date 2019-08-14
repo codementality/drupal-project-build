@@ -33,6 +33,8 @@ composer require "drupal/paragraphs:^1.5" --working-dir=drupal --no-update
 composer require "drupal/pathauto:^1.3" --working-dir=drupal --no-update
 composer require "drupal/redirect:^1.3" --working-dir=drupal --no-update
 composer require "drupal/styleguide:^1.0@alpha" --working-dir=drupal --no-update
+composer require "mglaman/drupal-check" --dev --working-dir=drupal --no-update
+
 ## Copy the README.md to the drupal directory
 cp docs/README.md drupal/README.md
 ## Get the .env.example file.
