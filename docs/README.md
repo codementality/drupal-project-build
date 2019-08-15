@@ -3,6 +3,11 @@
 This project template provides a starter kit for managing your site
 dependencies with [Composer](https://getcomposer.org/).  It is built off the [Composer template for Drupal projects](https://github.com/drupal-composer/drupal-project), so many of the instructions for use will be very similar.
 
+## Build Status
+This is the build indicator for testing the process of creating and building a project with this project.  Replace this with your project's specific TRAVIS testing indicator.
+
+[![Build Status](https://travis-ci.org/codementality/drupal-project.svg?branch=travis-tests)](https://travis-ci.org/codementality/drupal-project)
+
 ## Additions to the Composer template for Drupal projects
 
 This project has some additions to the standard installed packages, namely:
