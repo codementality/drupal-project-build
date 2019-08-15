@@ -34,6 +34,7 @@ composer require "drupal/pathauto:^1.3" --working-dir=drupal --no-update
 composer require "drupal/redirect:^1.3" --working-dir=drupal --no-update
 composer require "drupal/styleguide:^1.0@alpha" --working-dir=drupal --no-update
 composer require "mglaman/drupal-check" --dev --working-dir=drupal --no-update
+composer require "genesis/behat-fail-aid:^2.1" --dev --working-dir=drupal --no-update
 
 ## Copy the README.md to the drupal directory
 cp docs/README.md drupal/README.md
@@ -55,6 +56,14 @@ mv drupal-project-docker-develop/config drupal/config
 rm -Rf drupal/drush
 mv drupal-project-docker-develop/drush drupal/drush
 rm -Rf drupal-project-docker-develop
+
+## Create directory structure for custom code
+mkdir -p drupal/docroot/modules/custom
+touch drupal/docroot/modules/custom/.gitkeep
+mkdir -p drupal/docroot/themes/custom
+touch drupal/docroot/themes/custom/.gitkeep
+mkdir -p drupal/docroot/profiles/custom
+touch drupal/docroot/profiles/custom/.gitkeep
 
 cd drupal
 git init
