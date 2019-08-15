@@ -24,7 +24,7 @@ composer require "roave/security-advisories:dev-master" --dev --working-dir=drup
 composer require "vanare/behat-cucumber-json-formatter:~1.1.1" --dev --working-dir=drupal --no-update
 composer require "php:>=7.2" --working-dir=drupal --no-update
 composer require "drupal/config_split:^1.4" --working-dir=drupal --no-update
-composer require "drupal/ctools:3.x-dev" --working-dir=drupal --no-update
+composer require "drupal/ctools:^3.2" --working-dir=drupal --no-update
 composer require "drupal/devel:~2.0" --working-dir=drupal --no-update
 composer require "drupal/diff:^1.0@RC" --working-dir=drupal --no-update
 composer require "drupal/environment_indicator:^3.6" --working-dir=drupal --no-update
