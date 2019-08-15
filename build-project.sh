@@ -53,6 +53,7 @@ mv drupal-project-docker-develop/Makefile drupal/Makefile
 mv drupal-project-docker-develop/docker-compose.yml drupal/docker-compose.yml
 mv drupal-project-docker-develop/drupal drupal/drupal
 mv drupal-project-docker-develop/config drupal/config
+mv drupal-project-docker-develop/.travis.yml drupal/.travis.yml
 rm -Rf drupal/drush
 mv drupal-project-docker-develop/drush drupal/drush
 rm -Rf drupal-project-docker-develop
