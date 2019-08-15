@@ -14,6 +14,11 @@ notifications:
 php:
   - 7.3
 
+# Build only when changes are pushed on or merged into develop branch
+branches:
+  only:
+  - develop
+
 before_install:
   - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - phpenv config-rm xdebug.ini
