@@ -51,6 +51,7 @@ mv drupal-project-docker-develop/docker drupal/docker
 mv drupal-project-docker-develop/tests drupal/tests
 mv drupal-project-docker-develop/Makefile drupal/Makefile
 mv drupal-project-docker-develop/docker-compose.yml drupal/docker-compose.yml
+mv drupal-project-docker-develop/docker-compose-travis.yml drupal/docker-compose-travis.yml
 mv drupal-project-docker-develop/drupal drupal/drupal
 mv drupal-project-docker-develop/config drupal/config
 mv drupal-project-docker-develop/.travis.yml drupal/.travis.yml
