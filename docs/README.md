@@ -6,7 +6,7 @@ dependencies with [Composer](https://getcomposer.org/).  It is built off the [Co
 ## Build Status
 This is the build indicator for testing the process of creating and building a project with this project.  Replace this with your project's specific TRAVIS testing indicator.
 
-[![Build Status](https://travis-ci.org/codementality/drupal-project.svg?branch=travis-tests)](https://travis-ci.org/codementality/drupal-project)
+[![Build Status](https://travis-ci.org/codementality/drupal-project.svg?branch=8.x)](https://travis-ci.org/codementality/drupal-project)
 
 ## Additions to the Composer template for Drupal projects
 
