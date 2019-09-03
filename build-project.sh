@@ -16,7 +16,7 @@ php build-composer-file.php
 ## Replace all occurrences of "web" with "docroot" in the .gitignore file.
 sed -i 's/web/docroot/' drupal/.gitignore
 ## Add packages to composer.json file for this project.
-composer require "behat/mink-selenium2-driver" --dev --working-dir=drupal --no-update
+composer require "behat/mink-selenium2-driver:1.4.x-dev as 1.3.x-dev" --dev --working-dir=drupal --no-update
 composer require "drupal/drupal-extension:^4.0@beta" --dev --working-dir=drupal --no-update
 composer require "guzzlehttp/guzzle:^6.0@dev" --dev --working-dir=drupal --no-update
 composer require "phpunit/phpunit:>=4.8.24" --dev --working-dir=drupal --no-update
