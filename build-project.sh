@@ -41,6 +41,9 @@ cp docs/README.md drupal/README.md
 ## Get the .env.example file.
 cp docs/.env.example drupal/.env.example
 
+## Copy the patches folder
+mkdir drupal/patches
+cp -r patches/. drupal/patches/.
 ## Start creating repo commit
 
 ## Downloads the codementality/drupal-project-docker as a zipfile and unzips it.
@@ -76,6 +79,7 @@ git config user.name "Lisa Ridley"
 git add .
 git commit -m 'Build Commit from Travis Build'
 git checkout -b 8.x
+
 git remote add origin https://github.com/codementality/drupal-project.git
 if [ -n "$GITHUB_API_KEY" ] && [ "$TRAVIS_BRANCH" = "develop" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
 	git push -f -q https://$GITHUB_USER:$GITHUB_API_KEY@github.com/codementality/drupal-project 8.x
