@@ -1,0 +1,14 @@
+diff --git a/src/Command/CheckCommand.php b/src/Command/CheckCommand.php
+index 6ee2bdb..3540dc1 100644
+--- a/src/Command/CheckCommand.php
++++ b/src/Command/CheckCommand.php
+@@ -146,7 +146,8 @@ class CheckCommand extends Command
+                 null,
+                 null,
+                 $configuration,
+-                null
++                null,
++                false
+             );
+         } catch (\PHPStan\Command\InceptionNotSuccessfulException $e) {
+             return 1;
