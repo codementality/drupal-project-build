@@ -45,10 +45,6 @@ unset( $data['extra']['installer-paths']['web/themes/contrib/{$name}']);
 $data['extra']['installer-paths']['docroot/core'] = $data['extra']['installer-paths']['web/core'];
 unset( $data['extra']['installer-paths']['web/core']);
 
-// Add patch
-$patch = ["patchme" => "patches/patch-drupal-check.patch"];
-$data['extra']['patches']['mglaman/drupal-check'] = (object) $patch;
-
 // Add config for bin-dir
 $data['config']['bin-dir'] = "bin/";
 

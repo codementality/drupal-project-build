@@ -41,9 +41,6 @@ cp docs/README.md drupal/README.md
 ## Get the .env.example file.
 cp docs/.env.example drupal/.env.example
 
-## Copy the patches folder
-mkdir drupal/patches
-cp -r patches/. drupal/patches/.
 ## Start creating repo commit
 
 ## Downloads the codementality/drupal-project-docker as a zipfile and unzips it.
